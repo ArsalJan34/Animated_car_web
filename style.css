@@ -28,12 +28,15 @@ body{
     animation: slideRight 1s ease forwards;
 }
 .navbar a {
+    display: inline-block;
     font-size: 18px;
     color: black;
     text-decoration: none;
     font-weight: 500;
     margin: 0 20px;
     transition: .3s ease;
+        animation: slideTop 1s ease forwards;
+        animation-delay: calc(.2s * var(--i));
 
 }
 .navbar a:hover,
@@ -153,6 +156,16 @@ transition: .5s;
     }
     100%{
         transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
         opacity: 1;
     }
 }
